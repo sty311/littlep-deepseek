@@ -1,0 +1,10 @@
+{
+  "deepseek_api_key": "YOUR_DEEPSEEK_API_KEY",
+  "api_base": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "listen": "127.0.0.1:18181",
+  "context_budget": 128000,
+  "web_search": true,
+  "max_search_uses": 3,
+  "log_level": "info"
+}

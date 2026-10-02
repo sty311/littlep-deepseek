@@ -1,0 +1,16 @@
+/dist/
+/private/
+/backup/
+/payload/
+/config.json
+*.log
+*.log.*
+__pycache__/
+*.pyc
+*.zip
+*.img
+*.so
+*.js.bin
+.DS_Store
+.idea/
+.vscode/

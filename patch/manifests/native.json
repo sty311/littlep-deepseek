@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "original_sha256": "8777269dfb91a1171fea3a88481b1428cdacbdd4563d4e9a59f1da133334de7c",
+  "patched_sha256": "d2da3e5a871176b358df572367a5800e325604aae00af7f3d0601b158591ba48",
+  "file_size_before": 1327912,
+  "file_size_after": 1327912,
+  "thunk_offset": "0xe39a0",
+  "thunk_end_exclusive": "0xe3a1f",
+  "original_rx_end": "0xe3998",
+  "patched_rx_end": "0xe3a1f",
+  "target_path": "/teacherp/chat/ask/sse",
+  "replacement_base_url": "http://127.0.0.1:18181",
+  "labels": {
+    "original": "0xe3a04",
+    "url": "0xe3a08"
+  },
+  "changes": [
+    {
+      "purpose": "extend first RX PT_LOAD p_filesz",
+      "file_offset": "0x60",
+      "virtual_address": null,
+      "length": 8,
+      "original_hex": "98390e0000000000",
+      "patched_hex": "1f3a0e0000000000"
+    },
+    {
+      "purpose": "extend first RX PT_LOAD p_memsz",
+      "file_offset": "0x68",
+      "virtual_address": null,
+      "length": 8,
+      "original_hex": "98390e0000000000",
+      "patched_hex": "1f3a0e0000000000"
+    },
+    {
+      "purpose": "SSE baseUrl call to thunk",
+      "file_offset": "0xa7ad0",
+      "virtual_address": "0xa7ad0",
+      "length": 4,
+      "original_hex": "9760ff97",
+      "patched_hex": "b4ef0094"
+    },
+    {
+      "purpose": "exact-path comparison, tail branches, localhost URL",
+      "file_offset": "0xe39a0",
+      "virtual_address": "0xe39a0",
+      "length": 127,
+      "original_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "patched_hex": "890340f98a0740f95f5900f1c10200540bffffd06bd52a912a0140f96c0140f95f010ceb010200542a0540f96c0540f95f010ceb810100542a1140b96c1140b95f010c6b010100542a2940796c2940795f010c6b81000054e00308aa61000010f560fe17ca70fe17687474703a2f2f3132372e302e302e313a313831383100"
+    }
+  ],
+  "target_relative_path": "libs/libbusiness_littlep_1755531922.so"
+}

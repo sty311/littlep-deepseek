@@ -1,0 +1,12 @@
+name: Device support evidence
+description: Metadata and hashes only; no firmware upload.
+body:
+  - type: markdown
+    attributes:
+      value: Other devices are untested. Do not upload firmware, binaries, API keys, accounts or serial numbers.
+  - type: textarea
+    id: identity
+    attributes:
+      label: Model, OS, DTB, SKU, app version and original file SHA256
+    validations:
+      required: true
